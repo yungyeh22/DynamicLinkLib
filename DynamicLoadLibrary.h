@@ -16,7 +16,7 @@ namespace Util {
 #define GET_FP(lib,FP_NAME,FP_ALIAS) \
     decltype(&::FP_NAME) FP_ALIAS = *lib.getFunction<decltype(&::FP_NAME)>(#FP_NAME);
 
-#ifdef _MSC_VER
+#if !defined QT_CORE_LIB  && defined _MSC_VER
 DWORD unloadDll(LPVOID Param);
 #endif
 

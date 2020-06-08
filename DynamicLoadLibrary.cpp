@@ -2,7 +2,7 @@
 
 namespace Util {
 
-#ifdef _MSC_VER
+#if !defined QT_CORE_LIB  && defined _MSC_VER
 DWORD unloadDll(LPVOID Param) {
     //	Param should be the address of the dllhandle
     HINSTANCE *dllhandle = (HINSTANCE*)Param;
